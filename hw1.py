@@ -88,11 +88,17 @@ def books_by_author(author: str, books: list[data.Book]) -> list[data.Book]:
 
 # Part 7: circle_bound
 def circle_bound(rectangle: data.Rectangle) -> data.Circle:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 7: implement circle_bound")
+    # TODO: Purpose: Returns a Circle object that encloses the given rectangle,
+    #                with the circle's center at the rectangle's center and
+    #                radius equal any of the rectangle's corners.
+    # TODO: Input(s): rectangle (data.Rectangle) - the rectangle to enclose in a circle.
+    #                 The rectangle is defined by its top-left and bottom-right corners.
+    # TODO: Output: The Circle object that surrounds the rectangle, with the center at the rectangle's
+    #               center and radius equal to the distance from the center to any corner of the rectangle.
+    center_x = (rectangle.top_left.x + rectangle.bottom_right.x) / 2
+    center_y = (rectangle.top_left.y + rectangle.bottom_right.y) / 2
+    radius = ((rectangle.top_left.x - center_x) ** 2 + (rectangle.top_left.y - center_y) ** 2) ** 0.5
+    return data.Circle(data.Point(center_x, center_y), radius)
 
 
 # Part 8: below_pay_average

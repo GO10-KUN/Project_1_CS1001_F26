@@ -74,11 +74,11 @@ class TestHomework1(unittest.TestCase):
     # Part 7: circle_bound
     def test_circle_bound_square(self):
         # TODO: Arrange inputs, call hw1.circle_bound, and assert the result.
-        self.fail("TODO: write the first unit test for circle_bound")
+        self.assertEqual(hw1.circle_bound(data.Rectangle(data.Point(3, 4), data.Point(-3, -4))), data.Circle(data.Point(0, 0), 5.0))
 
     def test_circle_bound_non_square_rectangle(self):
         # TODO: Arrange inputs, call hw1.circle_bound, and assert the result.
-        self.fail("TODO: write the second unit test for circle_bound")
+        self.assertEqual(hw1.circle_bound(data.Rectangle(data.Point(0, 0), data.Point(6, 4))), data.Circle(data.Point(3, 2), 3.605551275463989))
 
     # Part 8: below_pay_average
     def test_below_pay_average_different_pay_rates(self):
