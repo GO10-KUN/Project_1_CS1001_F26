@@ -12,29 +12,42 @@ import data
 
 # Part 1: vowel_count
 def vowel_count(text: str) -> int:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 1: implement vowel_count")
+    # TODO: Purpose: Goes through the given string and counts the number of vowels in it.
+    # TODO: Input(s): text (str) - the string to analyze.
+    # TODO: Output: int - the number of vowels in the string.
+    count = 0
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+    for char in text:
+        if char.lower() in vowels:
+            count += 1
+    return count
 
 
 # Part 2: short_lists
 def short_lists(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 2: implement short_lists")
+    # TODO: Purpose: Goes through a list of lists and returns those with exactly two elements.
+    # TODO: Input(s): The list of lists to analyze.
+    # TODO: Output: The list of lists with exactly two elements.
+    result = []
+    for item in items:
+        if len(item) == 2:
+            result.append(item)
+    return result
 
 
 # Part 3: ascending_pairs
 def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 3: implement ascending_pairs")
+    # TODO: Purpose: Returns a new list of lists where lists with a length of 2 are sorted in ascending 
+    #                order, while other lists remain unchanged.
+    # TODO: Input(s): items (list of lists of int) - the list of lists to analyze.
+    # TODO: Output: list[list[int]] - the new list of lists with ascending pairs.
+    result = []
+    for item in items:
+        if len(item) == 2:
+            result.append(sorted(item))
+        else:
+            result.append(item)
+    return result
 
 
 # Part 4: add_prices

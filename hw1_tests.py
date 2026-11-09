@@ -21,30 +21,25 @@ class TestHomework1(unittest.TestCase):
 
     # Part 1: vowel_count
     def test_vowel_count_case_insensitive(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.fail("TODO: write the first unit test for vowel_count")
+        self.assertEqual(hw1.vowel_count("HEllO World"), 3)
 
     def test_vowel_count_empty_string(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.fail("TODO: write the second unit test for vowel_count")
+        self.assertEqual(hw1.vowel_count(""), 0)
 
     # Part 2: short_lists
     def test_short_lists_mixed_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
-        self.fail("TODO: write the first unit test for short_lists")
+        self.assertEqual(hw1.short_lists([[1, 2], [3], [4, 5, 6], [7, 8]]), [[1, 2], [7, 8]])
 
     def test_short_lists_no_matching_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
-        self.fail("TODO: write the second unit test for short_lists")
+        self.assertEqual(hw1.short_lists([[1], [2], [3]]), [])
+
 
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
-        self.fail("TODO: write the first unit test for ascending_pairs")
+        self.assertEqual(hw1.ascending_pairs([[2, 1], [5, 4]]), [[1, 2], [4, 5]])
 
     def test_ascending_pairs_other_lengths_unchanged(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
-        self.fail("TODO: write the second unit test for ascending_pairs")
+        self.assertEqual(hw1.ascending_pairs([[3, 2, 1], [4, 5]]), [[3, 2, 1], [4, 5]])
 
     # Part 4: add_prices
     def test_add_prices_no_cents_carry(self):
