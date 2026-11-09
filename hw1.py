@@ -52,11 +52,15 @@ def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
 
 # Part 4: add_prices
 def add_prices(first: data.Price, second: data.Price) -> data.Price:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 4: implement add_prices")
+    # TODO: Purpose: Adds two Price objects together and returns a new Price object representing the total.
+    #                Adds the dollars and cents separately, carrying over if cents exceed 100.
+    # TODO: Input(s): Two Price objects to add together.
+    # TODO: Output: The sum of the two Price objects as a new Price object.
+    result = data.Price(first.dollars + second.dollars, first.cents + second.cents)
+    if result.cents >= 100:
+        result.dollars += result.cents // 100
+        result.cents = result.cents % 100
+    return result
 
 
 # Part 5: rectangle_area

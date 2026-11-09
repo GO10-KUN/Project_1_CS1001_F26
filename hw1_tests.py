@@ -33,7 +33,6 @@ class TestHomework1(unittest.TestCase):
     def test_short_lists_no_matching_lengths(self):
         self.assertEqual(hw1.short_lists([[1], [2], [3]]), [])
 
-
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
         self.assertEqual(hw1.ascending_pairs([[2, 1], [5, 4]]), [[1, 2], [4, 5]])
@@ -43,12 +42,16 @@ class TestHomework1(unittest.TestCase):
 
     # Part 4: add_prices
     def test_add_prices_no_cents_carry(self):
-        # TODO: Arrange inputs, call hw1.add_prices, and assert the result.
-        self.fail("TODO: write the first unit test for add_prices")
+        first = data.Price(1, 50)
+        second = data.Price(2, 30)
+        expected = data.Price(3, 80)
+        self.assertEqual(hw1.add_prices(first, second), expected)
 
     def test_add_prices_with_cents_carry(self):
-        # TODO: Arrange inputs, call hw1.add_prices, and assert the result.
-        self.fail("TODO: write the second unit test for add_prices")
+        first = data.Price(1, 80)
+        second = data.Price(2, 75)
+        expected = data.Price(4, 55)
+        self.assertEqual(hw1.add_prices(first, second), expected)
 
     # Part 5: rectangle_area
     def test_rectangle_area_standard_rectangle(self):
