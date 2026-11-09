@@ -75,11 +75,15 @@ def rectangle_area(rectangle: data.Rectangle) -> float:
 
 # Part 6: books_by_author
 def books_by_author(author: str, books: list[data.Book]) -> list[data.Book]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 6: implement books_by_author")
+    # TODO: Purpose: Returns a list of books written by the specified author from a given list of Book objects.
+    # TODO: Input(s): author (str) - the name of the author to search for.
+    #                 books (list[data.Book]) - the list of Book objects to search through.
+    # TODO: Output: A list of Book objects written by the specified author.
+    result = []
+    for book in books:
+        if book.authors == author:
+            result.append(book)
+    return result
 
 
 # Part 7: circle_bound

@@ -65,12 +65,12 @@ class TestHomework1(unittest.TestCase):
     # Part 6: books_by_author
     def test_books_by_author_matching_authors(self):
         # TODO: Arrange inputs, call hw1.books_by_author, and assert the result.
-        self.fail("TODO: write the first unit test for books_by_author")
+        self.assertEqual(hw1.books_by_author("Author A", [data.Book("Author A", "Book 1"), data.Book("Author B", "Book 2")]), [data.Book("Author A", "Book 1")])
 
     def test_books_by_author_no_matches(self):
         # TODO: Arrange inputs, call hw1.books_by_author, and assert the result.
-        self.fail("TODO: write the second unit test for books_by_author")
-
+        self.assertEqual(hw1.books_by_author("Author C", [data.Book("Author A", "Book 1"), data.Book("Author B", "Book 2")]), [])
+    
     # Part 7: circle_bound
     def test_circle_bound_square(self):
         # TODO: Arrange inputs, call hw1.circle_bound, and assert the result.
