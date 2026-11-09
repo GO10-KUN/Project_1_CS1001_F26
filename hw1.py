@@ -103,8 +103,12 @@ def circle_bound(rectangle: data.Rectangle) -> data.Circle:
 
 # Part 8: below_pay_average
 def below_pay_average(employees: list[data.Employee]) -> list[str]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 8: implement below_pay_average")
+    # TODO: Purpose: Provides a list of names of employees whose pay rate is
+    #                below the average pay rate of all employees in the given list.
+    # TODO: Input(s): employees (list[data.Employee]) - the list of Employee objects to analyze.
+    #                Each Employee object contains a name and a pay rate.
+    # TODO: Output: A list of names (str) of employees whose pay rate is below the average pay rate.
+    if len(employees) == 0:
+        return []
+    average_pay = sum(employee.pay_rate for employee in employees) / len(employees)
+    return [employee.name for employee in employees if employee.pay_rate < average_pay]

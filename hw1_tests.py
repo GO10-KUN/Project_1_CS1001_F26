@@ -83,12 +83,13 @@ class TestHomework1(unittest.TestCase):
     # Part 8: below_pay_average
     def test_below_pay_average_different_pay_rates(self):
         # TODO: Arrange inputs, call hw1.below_pay_average, and assert the result.
-        self.fail("TODO: write the first unit test for below_pay_average")
+        employeeExample = [data.Employee("Alice", 15.0), data.Employee("Bob", 20.0), data.Employee("Charlie", 10.0)]
+        # Average pay rate = (15 + 20 + 10) / 3 = 15.0
+        self.assertEqual(hw1.below_pay_average(employeeExample), ["Charlie"])
 
     def test_below_pay_average_empty_list(self):
         # TODO: Arrange inputs, call hw1.below_pay_average, and assert the result.
-        self.fail("TODO: write the second unit test for below_pay_average")
-
+        self.assertEqual(hw1.below_pay_average([]), [])
 
 if __name__ == '__main__':
     unittest.main()
