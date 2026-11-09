@@ -65,11 +65,12 @@ def add_prices(first: data.Price, second: data.Price) -> data.Price:
 
 # Part 5: rectangle_area
 def rectangle_area(rectangle: data.Rectangle) -> float:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 5: implement rectangle_area")
+    # TODO: Purpose: Calculates the area of a given rectangle using its width and height.
+    # TODO: Input(s): Rectangle object for which to calculate the area.
+    # TODO: Output: The area of the rectangle as a float.
+    width = rectangle.top_left.x - rectangle.bottom_right.x
+    height = rectangle.top_left.y - rectangle.bottom_right.y
+    return width * height
 
 
 # Part 6: books_by_author

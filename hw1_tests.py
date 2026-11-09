@@ -56,11 +56,11 @@ class TestHomework1(unittest.TestCase):
     # Part 5: rectangle_area
     def test_rectangle_area_standard_rectangle(self):
         # TODO: Arrange inputs, call hw1.rectangle_area, and assert the result.
-        self.fail("TODO: write the first unit test for rectangle_area")
+        self.assertEqual(hw1.rectangle_area(data.Rectangle(data.Point(0, 0), data.Point(4, 3))), 12)
 
     def test_rectangle_area_negative_coordinates(self):
         # TODO: Arrange inputs, call hw1.rectangle_area, and assert the result.
-        self.fail("TODO: write the second unit test for rectangle_area")
+        self.assertEqual(hw1.rectangle_area(data.Rectangle(data.Point(-2, -1), data.Point(2, 2))), 12)
 
     # Part 6: books_by_author
     def test_books_by_author_matching_authors(self):
